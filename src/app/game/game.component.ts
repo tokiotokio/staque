@@ -17,8 +17,7 @@ export class GameComponent implements OnInit {
   ngOnInit() {
 		this.hand_s.hand
 			.subscribe(lst => this.hand = lst);
-		this.hand_s.add(10);
-		console.log(this.hand);
+		this.hand_s.init();
   }
 
 }
