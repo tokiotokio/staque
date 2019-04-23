@@ -1,14 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <form>
+	<span>title ←→ game</span>
 	<input type="checkbox" [(ngModel)]="scene" name="test">
 </form>
 
 <div *ngIf="scene">
-<app-start></app-start>
+	<app-start></app-start>
 </div>
-<div *ngIf="scene">
-<app-game></app-game>
+<div *ngIf="!scene">
+	<app-game></app-game>
 </div>
 
 <router-outlet></router-outlet>

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StackComponent implements OnInit {
 
+	private stack:number = [10,5,3,1];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+	attack():void{
+		console.log("attack");
+	}
 }

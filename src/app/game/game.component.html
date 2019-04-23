@@ -1,5 +1,17 @@
-<p>
-  game works!
-</p>
-<app-queue></app-queue>
-<app-stack></app-stack>
+
+<form>
+	<span>stack ←→ queue</span>
+	<input type="checkbox" [(ngModel)]="scene" name="test">
+</form>
+
+<div *ngIf="scene">
+	<app-queue></app-queue>
+</div>
+
+<div *ngIf="!scene">
+	<app-stack></app-stack>
+</div>
+
+<div *ngFor="let x of hand"> 
+	<span>{{x}}</span>
+</div>
