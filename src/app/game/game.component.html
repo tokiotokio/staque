@@ -1,17 +1,8 @@
 
-<form>
-	<span>stack ←→ queue</span>
-	<input type="checkbox" [(ngModel)]="scene" name="test">
-</form>
+<router-outlet></router-outlet>
 
-<div *ngIf="scene">
-	<app-queue></app-queue>
-</div>
-
-<div *ngIf="!scene">
-	<app-stack></app-stack>
-</div>
-
-<div *ngFor="let x of hand"> 
-	<span>{{x}}</span>
+<div>
+	<span *ngFor="let x of hand"> 
+		{{x}}
+	</span>
 </div>

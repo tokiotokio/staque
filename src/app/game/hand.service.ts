@@ -21,6 +21,9 @@ export class HandService {
 	}
 	add(n:number):void{
 		this.hand_.push(n);
+		this.hand_.sort(function(a,b){
+			return (a>=b)?(a>b)?-1:0:1;
+		});
 		this.hand.next(this.hand_);
 	}
 }
