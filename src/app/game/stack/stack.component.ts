@@ -27,15 +27,12 @@ export class StackComponent implements OnInit {
   }
 
 	attack():void{
-		console.log(this.hand,this.stack);
 		let sum:number = 0;
 		for(let x:number of this.hand){
 			sum += x;
 		}
 
 		let l:number = this.stack.length - 1;
-		console.log(l,this.stack[l])
-		console.log(sum,this.stack[l] + this.stack[l-1]);
 		if(sum > this.stack[l]+this.stack[l-1]){
 			let num = this.number_s.pull();
 			this.hand_s.add(num);

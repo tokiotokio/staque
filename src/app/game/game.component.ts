@@ -20,4 +20,10 @@ export class GameComponent implements OnInit {
 		this.hand_s.init();
   }
 
+	private select(e:any) {
+		const tg = e.target;
+		const el = tg.parentElement;
+		console.log(el);
+		console.log(e.target);
+	}
 }

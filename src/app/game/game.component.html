@@ -1,8 +1,10 @@
 
+<nav><a routerLink="/start">title</a></nav>
+
 <router-outlet></router-outlet>
 
-<div>
-	<span *ngFor="let x of hand"> 
+<div (click)="select($event)">
+	<span *ngFor="let x of hand">
 		{{x}}
 	</span>
 </div>
