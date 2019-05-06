@@ -9,8 +9,8 @@ import { HandService } from './../hand.service'
 })
 export class StackComponent implements OnInit {
 
-	private stack:number[];
-	private hand:number[];
+	stack:number[];
+	hand:number[];
 
 	constructor(
 		private number_s : NumberService,
@@ -28,7 +28,7 @@ export class StackComponent implements OnInit {
 
 	attack():void{
 		let sum:number = 0;
-		for(let x:number of this.hand){
+		for(let x of this.hand){
 			sum += x;
 		}
 

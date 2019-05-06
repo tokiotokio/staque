@@ -6,8 +6,8 @@ import { Observable,of,Subject} from 'rxjs';
 })
 export class NumberService {
 
-	private stack_:number[] = [10,3,2,1];
-	private stack:Subject<number[]> = new Subject<number[]>();
+	stack_:number[] = [10,3,2,1];
+	stack:Subject<number[]> = new Subject<number[]>();
 
 	constructor() { }
 	init() :void{

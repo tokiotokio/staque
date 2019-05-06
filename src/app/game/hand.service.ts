@@ -6,8 +6,8 @@ import { Observable,of,Subject} from 'rxjs';
 })
 export class HandService {
 
-	private hand_:number[] = [5];
-	private hand:Subject<number[]> = new Subject<number[]>();
+	hand_:number[] = [5];
+	hand:Subject<number[]> = new Subject<number[]>();
 
 	constructor() {  }
 	init() :void{

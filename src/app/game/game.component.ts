@@ -8,9 +8,9 @@ import { HandService } from './hand.service';
 })
 export class GameComponent implements OnInit {
 
-	private scene:Boolean = false;
+	scene:Boolean = false;
 
-	private hand:number[] = [];
+	hand:number[] = [];
 	
   constructor(private hand_s : HandService) { }
 
