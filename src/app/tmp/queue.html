@@ -1,0 +1,70 @@
+<!DOCTYPE html>     <!--HTMLのバージョンの宣言。これだとHTML5。-->
+<html lang="ja">
+
+  <!-- ファイル自身のヘッダ情報を示す部分-->
+  <head>
+    <meta charset="UTF-8">
+    <title>StaQue_Queueの様子</title>
+    <style>
+      body{
+      }
+      .stack1 {
+        position: relative;
+      }
+      .stack1_nakami {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .hand {
+        background: #f5deb3;
+        width: 800px;
+        padding: 50px;
+        text-align: light;
+        border: 1px solid #cccccc;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+
+  <!-- ブラウザ上で実際に見える部分-->
+  <body>
+    <center>
+      <p>
+<!--
+      <div class="stack1">
+        <img src="./image/queue1.png"/>
+        <div class="stack1_nakami">
+          <img src="./image/中身_不明.png"/>
+        </div>
+      </div>
+      <img src="./image/queue2.png"/>
+      </p>
+-->
+      <p>
+        <img src="./image/queue1.png"/>
+        <img src="./image/queue2.png"/>
+      </p>
+      <p>
+        <img src="./image/queue3.png"/>
+        <img src="./image/queue4.png"/>
+      </p>
+      <div class="hand">
+        <p>あなたの手持ち</p>
+      </div>
+      <p>
+      <input type="button" value="Stackの画面へ" onclick="location.href='file:///C:/Users/Takeuchi/Documents/hosono/document/授業/計算機システム特論/Stack.html'">
+      </p>
+    </center>
+  </body>
+
+</html>
