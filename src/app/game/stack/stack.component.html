@@ -1,14 +1,9 @@
 
 <nav><a routerLink="/game/queue">queue</a></nav>
 
-<div id="all_queue">
+<div id="stack">
 	<img [src]="fig_stack">
-	<img [src]="fig_stack">
-	<img [src]="fig_stack">
-	<img [src]="fig_stack">
-</div>
-<div>
-	<div>stack</div>
+	<p></p>
 	<span *ngFor="let x of stack">{{x}} </span>
 </div>
 

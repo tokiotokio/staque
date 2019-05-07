@@ -1,3 +1,16 @@
 #doc {
 	text-align:center;
 }
+
+.box {
+	background-color: #FFF;
+	transition-duration:1s;
+}
+
+.box:hover{
+	padding: 0.0em 0.0em;
+	margin: 0em 0;
+	background: #d6ebff;
+	box-shadow: 0px 0px 0px 10px #d6ebff;
+	border: dashed 2px white;
+}

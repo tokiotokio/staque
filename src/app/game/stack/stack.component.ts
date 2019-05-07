@@ -11,7 +11,7 @@ declare var require: any;
 })
 export class StackComponent implements OnInit {
 
-	fig_stack = require('../../image/queue1.png');
+	fig_stack = require('../../image/stack_appearance.png');
 
 	stack:number[];
 	hand:number[];
