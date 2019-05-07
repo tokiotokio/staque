@@ -2,12 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { NumberService } from './number.service'
 import { HandService } from './../hand.service'
 
+declare var require: any;
+
 @Component({
   selector: 'app-stack',
   templateUrl: './stack.component.html',
   styleUrls: ['./stack.component.css']
 })
 export class StackComponent implements OnInit {
+
+	fig_stack = require('../../image/queue1.png');
 
 	stack:number[];
 	hand:number[];

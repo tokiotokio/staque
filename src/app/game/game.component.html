@@ -3,8 +3,13 @@
 
 <router-outlet></router-outlet>
 
-<div (click)="select($event)">
-	<span *ngFor="let x of hand">
-		{{x}}
-	</span>
+<div class="hand">
+	<p>あなたの手持ち</p>
+		<div (click)="select($event)">
+		<span *ngFor="let x of hand">
+			{{x}}
+		</span>
+	</div>
 </div>
+
+

@@ -1,0 +1,22 @@
+#all_queue {
+	text-align : center
+}
+
+.stack1 {
+	position: relative;
+}
+
+.stack1_nakami {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
