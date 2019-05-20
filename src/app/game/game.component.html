@@ -1,5 +1,15 @@
-<p>
-  game works!
-</p>
-<app-queue></app-queue>
-<app-stack></app-stack>
+
+<nav><a routerLink="/start">title</a></nav>
+
+<router-outlet></router-outlet>
+
+<div class="hand">
+	<p>あなたの手持ち</p>
+		<div (click)="select($event)">
+		<span *ngFor="let x of hand" class="number">
+			{{x}}
+		</span>
+	</div>
+</div>
+
+

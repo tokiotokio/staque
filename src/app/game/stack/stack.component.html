@@ -1,3 +1,11 @@
-<p>
-  stack works!
-</p>
+
+<nav><a routerLink="/game/queue">queue</a></nav>
+
+<div id="stack">
+	<img [src]="fig_stack">
+	<p></p>
+	<span *ngFor="let x of stack">{{x}} </span>
+</div>
+
+<button (click)="attack()">attack</button>
+

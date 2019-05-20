@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HandService } from './hand.service';
 
 @Component({
   selector: 'app-game',
@@ -7,11 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-	private scene:number = 0;
+	scene:Boolean = false;
 
-  constructor() { }
+	hand:number[] = [];
+	
+  constructor(private hand_s : HandService) { }
 
   ngOnInit() {
+		this.hand_s.hand
+			.subscribe(lst => this.hand = lst);
+		this.hand_s.init();
   }
 
+	private select(e:any) {
+		const tg = e.target;
+		const el = tg.parentElement;
+		console.log(el);
+		console.log(e.target);
+	}
 }
