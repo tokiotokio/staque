@@ -16,4 +16,8 @@ export class QueueComponent implements OnInit {
   ngOnInit() {
   }
 
+	runQueue():void {
+		console.log("queue clicked");
+	}
+
 }
