@@ -2,9 +2,15 @@
 <nav><a routerLink="/game/queue">queue</a></nav>
 
 <div id="stack">
-	<img [src]="fig_stack">
+	<!-- <img [src]="fig_stack"> -->
 	<p></p>
-	<span *ngFor="let x of stack">{{x}} </span>
+<div class = "flex">
+	<span *ngFor="let x of stack">
+		<!-- <div class="to-upright"> -->
+		{{x}}
+		<!-- </div> -->
+	</span>
+</div>
 </div>
 
 <button (click)="attack()">attack</button>
