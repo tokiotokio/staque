@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NumberService } from './number.service'
 import { HandService } from './../hand.service'
+import { DaysService } from './../days.service'
 
 declare var require: any;
 
@@ -18,7 +19,8 @@ export class StackComponent implements OnInit {
 
 	constructor(
 		private number_s : NumberService,
-		private hand_s : HandService
+        private hand_s : HandService,
+        private days_s : DaysService
 	) { }
 
   ngOnInit() {
@@ -43,6 +45,8 @@ export class StackComponent implements OnInit {
 		} else {
 			let num = this.hand_s.pop();
 			this.number_s.push(num);
-		}
+        }
+
+        this.days_s.Days_Reset();
 	}
 }

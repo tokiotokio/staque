@@ -10,4 +10,5 @@
 </div>
 
 <span>選択しているqueue{{selectNum+1}}</span>
-<button (click)="runQueue()">queue button</button>
+<button (click)="runQueue()" [disabled]="isActive()">queue button</button>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NumberService } from './number.service';
 import { HandService } from './../hand.service';
+import { DaysService } from '../days.service';
 
 declare var require: any;
 
@@ -18,7 +19,8 @@ export class QueueComponent implements OnInit {
 
 	constructor(
 		private hand_s : HandService,
-		private number_s : NumberService
+		private number_s : NumberService,
+		private days_s : DaysService
 	){}
 
   ngOnInit() {
@@ -31,6 +33,7 @@ export class QueueComponent implements OnInit {
   }
 
 	runQueue():void {
+		this.days_s.Days_Decrement();
 		console.log("queue clicked");
 		const val = this.hand_s.pop();
 		const retVal = this.number_s.enqueueAndDequeue(this.selectNum,val);
@@ -39,5 +42,9 @@ export class QueueComponent implements OnInit {
 
 	select(n:number){
 		this.selectNum = n;
+	}
+
+	isActive():boolean {
+		return !this.days_s.Days_isZero();
 	}
 }
