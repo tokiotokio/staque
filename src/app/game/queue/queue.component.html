@@ -1,11 +1,14 @@
 <nav><a routerLink="/game/stack">stack</a></nav>
 
-<div id="all_queue">
+<div id="queue">
+	<span *ngFor="let x of queue1">{{x}} </span>
 	<img [src]="fig_queue">
+	<span *ngFor="let x of queue2">{{x}} </span>
 	<img [src]="fig_queue">
+	<div></div>
+	<span *ngFor="let x of queue3">{{x}} </span>
 	<img [src]="fig_queue">
-	<img [src]="fig_queue">
-	<img [src]="fig_queue">
+	<span *ngFor="let x of queue4">{{x}} </span>
 	<img [src]="fig_queue">
 </div>
 
