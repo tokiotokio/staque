@@ -1,5 +1,12 @@
 #stack {
+	position: relative;
+	align : center;
 	text-align : center;
+	background-size : contain;
+	background-image: url("../../image/stack_appearance.png");
+	background-repeat: no-repeat;
+	background-position : center;
+	height : 600px
 }
 
 #stack span {
@@ -8,4 +15,19 @@
 
 button {
 	font-size : 50px;
+}
+
+to-upright {
+	-webkit-text-orientation: upright;
+	text-orientation: upright;
+}
+
+.flex{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 25px;
+	display:flex;
+	flex-flow: column-reverse nowrap;
+
 }
