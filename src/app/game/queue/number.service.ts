@@ -8,12 +8,13 @@ export class NumberService {
 
 	queues_:number[][] = [
 		[1,2,3,4],
-		[2,2,3,4],
-		[3,2,3,4],
-		[4,2,3,4]
+		[2,2,3,5],
+		[4,1,6,1],
+		[3,10,1,0]
 	];
-	levels_ :number[] = [
-		1,1,2,4
+	/// [必要レベル，必要交換ポイント]
+	levels_ :number[][] = [
+		[1,1],[1,1],[2,3],[4,5]
 	];
 
 	queues:Subject<number[][]> = new Subject<number[][]>();
@@ -35,6 +36,10 @@ export class NumberService {
 	}
 
 	overLevel(s:number,l:number) :Boolean{
-		return (l >= this.levels_[s]);
+		return (l >= this.levels_[s][0]);
+	}
+
+	overPointLevel(s:number,l:number){
+		return (l >= this.levels_[s][1]);
 	}
 }
