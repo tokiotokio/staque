@@ -1,15 +1,13 @@
 <nav><a routerLink="/game/stack">stack</a></nav>
 
 <div id="queue">
-	<span *ngFor="let x of queue1">{{x}} </span>
-	<img [src]="fig_queue">
-	<span *ngFor="let x of queue2">{{x}} </span>
-	<img [src]="fig_queue">
-	<div></div>
-	<span *ngFor="let x of queue3">{{x}} </span>
-	<img [src]="fig_queue">
-	<span *ngFor="let x of queue4">{{x}} </span>
-	<img [src]="fig_queue">
+	<div *ngFor="let q of queues; index as i ">
+		<img [src]="fig_queue" (click)="select(i)">
+		<span *ngFor="let x of q">
+		{{x}}
+		</span>
+ 	</div>
 </div>
 
+<span>選択しているqueue{{selectNum+1}}</span>
 <button (click)="runQueue()">queue button</button>
