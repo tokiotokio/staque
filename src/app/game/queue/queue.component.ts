@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NumberService } from './number.service';
+import { HandService } from './../hand.service';
 
 declare var require: any;
 
@@ -13,20 +14,27 @@ export class QueueComponent implements OnInit {
 	fig_queue = require('../../image/queue1.png');
 	selectNum:number = 0;
 	queues:number[][];
+	hand:number[];
 
 	constructor(
+		private hand_s : HandService,
 		private number_s : NumberService
 	){}
 
   ngOnInit() {
 		this.number_s.queues
 			.subscribe(stk => this.queues= stk);
+		this.hand_s.hand
+			.subscribe(lst => this.hand = lst);
 		this.number_s.init();
+		this.hand_s.init();
   }
 
 	runQueue():void {
 		console.log("queue clicked");
-		this.number_s.enqueueAndDequeue(this.selectNum,10);
+		const val = this.hand_s.pop();
+		const retVal = this.number_s.enqueueAndDequeue(this.selectNum,val);
+		this.hand_s.add(retVal);	
 	}
 
 	select(n:number){

@@ -19,10 +19,12 @@ export class NumberService {
 		this.queues.next(this.queues_);
 	}
 
-	enqueueAndDequeue(s:number, n:number) {
+	enqueueAndDequeue(s:number, n:number):number {
 		var q = this.queues_[s];
 		q.push(n);
-
+		const val = q[0];
+		q.shift();
 		this.queues.next(this.queues_);
+		return val;
 	}
 }
