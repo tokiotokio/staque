@@ -9,4 +9,5 @@
 	<img [src]="fig_queue">
 </div>
 
-<button (click)="runQueue()">queue button</button>
+<button (click)="runQueue()" [disabled]="isActive()">queue button</button>
+
