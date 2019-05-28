@@ -34,7 +34,6 @@ export class QueueComponent implements OnInit {
 
 	runQueue():void {
 		this.days_s.Days_Decrement();
-		console.log("queue clicked");
 		const val = this.hand_s.pop();
 		const retVal = this.number_s.enqueueAndDequeue(this.selectNum,val);
 		this.hand_s.add(retVal);	
@@ -42,6 +41,10 @@ export class QueueComponent implements OnInit {
 
 	select(n:number){
 		this.selectNum = n;
+	}
+
+	isUpper(n:number):Boolean{
+		return this.number_s.overLevel(n, this.hand.length);
 	}
 
 	isActive():boolean {

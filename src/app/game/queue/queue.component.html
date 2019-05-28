@@ -2,9 +2,11 @@
 
 <div id="queue">
 	<div *ngFor="let q of queues; index as i ">
-		<img [src]="fig_queue" (click)="select(i)">
-		<span *ngFor="let x of q">
-		{{x}}
+		<span *ngIf="isUpper(i)">
+			<img [src]="fig_queue" (click)="select(i)">
+			<span *ngFor="let x of q">
+			{{x}}
+			</span>
 		</span>
  	</div>
 </div>
