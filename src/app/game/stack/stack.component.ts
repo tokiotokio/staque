@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NumberService } from './number.service'
 import { HandService } from './../hand.service'
 import { DaysService } from './../days.service'
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 declare var require: any;
 
