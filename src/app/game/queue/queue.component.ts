@@ -34,10 +34,11 @@ export class QueueComponent implements OnInit {
 
 	runQueue():void {
 		this.days_s.Days_Decrement();
-		const val = this.hand_s.pop();
-		const retVal = (this.number_s.overPointLevel(this.selectNum,val))?
-		this.number_s.enqueueAndDequeue(this.selectNum,val):
-		val;
+		const p = this.number_s.getPointLevel(this.selectNum);
+		const val = this.hand_s.pop(p);
+		if(val < 0){return;}
+		const retVal = this.number_s.enqueueAndDequeue(this.selectNum,val);
+
 		this.hand_s.add(retVal);	
 	}
 

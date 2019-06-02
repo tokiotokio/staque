@@ -32,7 +32,5 @@ export class GameComponent implements OnInit {
 	private select(e:any) {
 		const tg = e.target;
 		const el = tg.parentElement;
-		console.log(el);
-		console.log(e.target);
 	}
 }

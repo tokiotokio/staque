@@ -39,7 +39,7 @@ export class NumberService {
 		return (l >= this.levels_[s][0]);
 	}
 
-	overPointLevel(s:number,l:number){
-		return (l >= this.levels_[s][1]);
+	getPointLevel(s:number) :number{
+		return this.levels_[s][1];
 	}
 }
