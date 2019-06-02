@@ -43,7 +43,7 @@ export class StackComponent implements OnInit {
 			let num = this.number_s.pull();
 			this.hand_s.add(num);
 		} else {
-			let num = this.hand_s.pop();
+			let num = this.hand_s.pop(0);
 			this.number_s.push(num);
         }
 

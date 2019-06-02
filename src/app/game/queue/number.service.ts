@@ -18,7 +18,7 @@ export class NumberService {
 	];
 
 	queues:Subject<number[][]> = new Subject<number[][]>();
-	levels:Subject<number[]> = new Subject<number[]>();
+	levels:Subject<number[][]> = new Subject<number[][]>();
 
   constructor() { }
 	init() :void{
