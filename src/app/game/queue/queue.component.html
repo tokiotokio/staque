@@ -1,14 +1,12 @@
 <div class="Link">
-	<!--<div><a class="toQueue">Queue</a></div>-->
-<div>
-<nav><a class="toStack" (click)="toStack()">Stack</a></nav>
-</div>
+<div> <a class="toStack" (click)="toStack()">Stack</a> </div>
+<div><a class="toQueue">Queue</a></div>
 </div>
 
 <div id="queue">
 	<div *ngFor="let q of queues; index as i ">
 		<span *ngIf="isUpper(i)">
-			<img [src]="fig_queue" (click)="select(i)" width="250px" height="100px">
+			<img [src]="fig_queue" (click)="select(i)" width="15vw" height="100px">
 			<span *ngFor="let x of q">
 			{{x}}
 			</span>

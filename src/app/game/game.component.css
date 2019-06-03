@@ -11,32 +11,37 @@
 	font-size:100px;
 }
 
+.staque {
+	height: 70vw;
+}
+
 .staque input {
 	display: none;
 }
 
 .staque input+#stack {
+	position: relative;
 	float: left;
+	width: 100vw;
 	background-color:#00ff00;
 	transition-duration:1s;
 }
 
 .staque input:checked+#stack { 
 	background-color:#ff00FF;
-	transform: translateX(-400px);
-}
-
-.staque input+#queue {
-	float: left;
+	transform: translateX(-100vw);
 }
 
 .staque input+#queue{
+	position: absolute;
 	float: left;
+	width: 100vw;
+	left:100vw;
 	background-color:#00ff00;
 	transition-duration:1s;
 }
 
 .staque input:checked+#queue { 
 	background-color:#ff00FF;
-	transform: translateX(-400px);
+	transform: translateX(-100vw);
 }
