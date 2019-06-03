@@ -1,14 +1,13 @@
 .hand {
 	background: #f5deb3;
-	width: 800px;
-	padding: 50px;
+	width: 100vw;
 	text-align: light;
 	border: 1px solid #cccccc;
 	margin: 20px auto;
 }
 
 .number {
-	font-size:100px;
+	font-size: 10vw;
 }
 
 .staque {
@@ -32,6 +31,9 @@
 	transform: translateX(-100vw);
 }
 
+.staque #queue {
+	background-color:#00ff00;
+}
 .staque input+#queue{
 	position: absolute;
 	float: left;
