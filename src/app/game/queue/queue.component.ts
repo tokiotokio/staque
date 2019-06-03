@@ -53,4 +53,8 @@ export class QueueComponent implements OnInit {
 	isActive():boolean {
 		return !this.days_s.Days_isZero();
 	}
+
+	toStack() {
+		this.hand_s.toggleClick();
+	}
 }

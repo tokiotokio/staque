@@ -10,6 +10,7 @@ import { DaysService } from './days.service';
 export class GameComponent implements OnInit {
 
 	scene:Boolean = false;
+	tgl:Boolean;
 
 	hand:number[] = [];
 	Days:number;
@@ -22,11 +23,14 @@ export class GameComponent implements OnInit {
   ngOnInit() {
 		this.hand_s.hand
 			.subscribe(lst => this.hand = lst);
-		this.hand_s.init();
-
+		this.hand_s.tgl
+			.subscribe(tg => this.tgl = tg);
 		this.days_s.Days
 		.subscribe(days => this.Days = days);
+
 		this.days_s.init();
+		this.hand_s.init();
+
   }
 
 	private select(e:any) {
