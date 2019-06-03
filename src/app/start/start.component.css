@@ -3,7 +3,6 @@
 }
 
 .box {
-	background-color: #FFF;
 	transition-duration:1s;
 }
 
@@ -13,4 +12,16 @@
 	background: #d6ebff;
 	box-shadow: 0px 0px 0px 10px #d6ebff;
 	border: dashed 2px white;
+}
+
+img {
+	transition-duration:1s;
+	height: 65vw;
+	width: auto;
+	transform: translateX(-6vw);
+}
+nav img {
+	height: 30vw;
+	width: auto;
+	transform: translateX(0vw);
 }
