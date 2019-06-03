@@ -1,8 +1,6 @@
 <div class="Link">
+<div> <a class="toStack" (click)="toStack()">Stack</a> </div>
 <div><a class="toQueue">Queue</a></div>
-<div>
-<nav><a routerLink="/game/stack" class="toStack">Stack</a></nav>
-</div>
 </div>
 
 <div id="queue">
@@ -16,6 +14,6 @@
  	</div>
 </div>
 
+<button (click)="runQueue()" [disabled]="isActive()">change</button>
 <span>選択しているqueue{{selectNum+1}}</span>
-<button (click)="runQueue()" [disabled]="isActive()">queue button</button>
 

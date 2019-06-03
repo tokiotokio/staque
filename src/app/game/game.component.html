@@ -1,11 +1,17 @@
 
-<nav><a routerLink="/start">title</a></nav>
+<div class="staque">
+	<input type="checkbox" [(ngModel)]="tgl">
+	<div id="stack"><app-stack></app-stack></div>
+	<input type="checkbox" [(ngModel)]="tgl">
+	<div id="queue"><app-queue></app-queue></div>
+</div>
 
-<router-outlet></router-outlet>
-
+<!--
+	いい感じに表示させたかったけど時間がないので
 <div class="Days">
     残り{{Days}}ターン
 </div>
+-->
 
 <div class="hand">
 	<p>あなたの手持ち</p>

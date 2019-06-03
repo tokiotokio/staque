@@ -14,7 +14,7 @@ export class NumberService {
 	];
 	/// [必要レベル，必要交換ポイント]
 	levels_ :number[][] = [
-		[1,1],[1,1],[2,3],[4,5]
+		[1,1],[1,1],[2,3],[2,5]
 	];
 
 	queues:Subject<number[][]> = new Subject<number[][]>();

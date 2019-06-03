@@ -50,4 +50,8 @@ export class StackComponent implements OnInit {
 
         this.days_s.Days_Reset();
 	}
+
+	toQueue() {
+		this.hand_s.toggleClick();
+	}
 }

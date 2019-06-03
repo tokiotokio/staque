@@ -6,6 +6,9 @@ import { Observable,of,Subject} from 'rxjs';
 })
 export class HandService {
 
+	tgl_: Boolean = false;
+	tgl: Subject<Boolean> = new Subject<Boolean>();
+
 	hand_:number[] = [5,10,2];
 	hand:Subject<number[]> = new Subject<number[]>();
 
@@ -15,6 +18,7 @@ export class HandService {
 		this.hand_.sort(function(a,b){
 			return (a>=b)?(a>b)?-1:0:1;
 		});
+		this.tgl.next(this.tgl_);
 	}
 
 	pop(num: number):number {
@@ -40,5 +44,10 @@ export class HandService {
 		this.hand_.sort(function(a,b){
 			return (a>=b)?(a>b)?-1:0:1;
 		});
+	}
+
+	toggleClick() {
+		this.tgl_ = !this.tgl_;
+		this.tgl.next(this.tgl_);
 	}
 }
