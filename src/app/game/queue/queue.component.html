@@ -1,4 +1,9 @@
-<nav><a routerLink="/game/stack">stack</a></nav>
+<div class="Link">
+<div><a class="toQueue">Queue</a></div>
+<div>
+<nav><a routerLink="/game/stack" class="toStack">Stack</a></nav>
+</div>
+</div>
 
 <div id="queue">
 	<div *ngFor="let q of queues; index as i ">
