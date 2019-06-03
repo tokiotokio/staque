@@ -11,28 +11,26 @@ export class GameComponent implements OnInit {
 
 	scene:Boolean = false;
 
-    hand:number[] = [];
-    Days:number;
-	
-    constructor(
-        private hand_s : HandService,
-        private days_s : DaysService
-    ) { }
+	hand:number[] = [];
+	Days:number;
+
+	constructor(
+			private hand_s : HandService,
+			private days_s : DaysService
+	) { }
 
   ngOnInit() {
 		this.hand_s.hand
 			.subscribe(lst => this.hand = lst);
-        this.hand_s.init();
+		this.hand_s.init();
 
-        this.days_s.Days
-        .subscribe(days => this.Days = days);
-        this.days_s.init();
+		this.days_s.Days
+		.subscribe(days => this.Days = days);
+		this.days_s.init();
   }
 
 	private select(e:any) {
 		const tg = e.target;
 		const el = tg.parentElement;
-		console.log(el);
-		console.log(e.target);
 	}
 }

@@ -5,14 +5,17 @@
 </div>
 </div>
 
-<div id="all_queue">
-	<img [src]="fig_queue">
-	<img [src]="fig_queue">
-	<img [src]="fig_queue">
-	<img [src]="fig_queue">
-	<img [src]="fig_queue">
-	<img [src]="fig_queue">
+<div id="queue">
+	<div *ngFor="let q of queues; index as i ">
+		<span *ngIf="isUpper(i)">
+			<img [src]="fig_queue" (click)="select(i)">
+			<span *ngFor="let x of q">
+			{{x}}
+			</span>
+		</span>
+ 	</div>
 </div>
 
+<span>選択しているqueue{{selectNum+1}}</span>
 <button (click)="runQueue()" [disabled]="isActive()">queue button</button>
 
