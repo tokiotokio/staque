@@ -1,7 +1,14 @@
 
 <nav><a routerLink="/start">title</a></nav>
+{{tgl}}
 
-<router-outlet></router-outlet>
+<div class="staque">
+	<input type="checkbox" [(ngModel)]="tgl">
+	<div id="stack"><app-stack></app-stack></div>
+	<input type="checkbox" [(ngModel)]="tgl">
+	<div id="queue"><app-queue></app-queue></div>
+</div>
+
 
 <div class="Days">
     残り{{Days}}ターン

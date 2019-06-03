@@ -10,3 +10,33 @@
 .number {
 	font-size:100px;
 }
+
+.staque input {
+	display: none;
+}
+
+.staque input+#stack {
+	float: left;
+	background-color:#00ff00;
+	transition-duration:1s;
+}
+
+.staque input:checked+#stack { 
+	background-color:#ff00FF;
+	transform: translateX(-400px);
+}
+
+.staque input+#queue {
+	float: left;
+}
+
+.staque input+#queue{
+	float: left;
+	background-color:#00ff00;
+	transition-duration:1s;
+}
+
+.staque input:checked+#queue { 
+	background-color:#ff00FF;
+	transform: translateX(-400px);
+}
