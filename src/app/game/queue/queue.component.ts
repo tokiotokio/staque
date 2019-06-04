@@ -45,6 +45,9 @@ export class QueueComponent implements OnInit {
 	select(n:number){
 		this.selectNum = n;
 	}
+	isSelected(n:number) :Boolean{
+		return (n==this.selectNum);
+	}
 
 	isUpper(n:number):Boolean{
 		return this.number_s.overLevel(n, this.hand.length);
