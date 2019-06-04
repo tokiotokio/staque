@@ -10,11 +10,6 @@ button {
 	font-size : 5vw;
 }
 
-div.Link{
-    display: flex;
-    justify-content: space-between;
-}
-
 
 a.toStack:hover{
     background: navy;
@@ -65,40 +60,3 @@ a.toStack:after{
     transition: border-right 0.3s, border-top 0.3s;
 }
 
-a.toQueue{
-    margin:40px 40px 5px 40px;
-    font-size: 27px;
-	position:relative;
-	display:inline-block;
-	padding:5px 20px 5px 40px;
-	color:#fff;
-	text-decoration:none;
-	height:30px;
-	line-height:30px;
-	border-radius:18px;
-	background: lightgray;
-}
-a.toQueue:before,
-a.toQueue:after{
-	content:"";
-	display:block;
-	position:absolute;
-}
-a.toQueue:before{
-	width:25px;
-	height:25px;
-	background:#fff;
-	border-radius:50%;
-	left:8px;
-	top:6.5px;
-}
-a.toQueue:after{
-	width:7px;
-	height:7px;
-	border-right:5px solid lightgray;
-	border-top:5px solid lightgray;
-	-webkit-transform:rotate(225deg);
-	transform:rotate(225deg);
-	left:16px;
-	top:14px;
-}
